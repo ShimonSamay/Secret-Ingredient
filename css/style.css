@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  flex-direction: column;
+  overflow: hidden scroll;
+  padding: 2% 0;
+  row-gap: 3%;
+}
+
+.slogan {
+  color: #d65108;
+}
+
+.searchInput {
+  margin-top: 1%;
+  width: 40%;
+  border-radius: 25px;
+  padding: 0.5%;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  color: #d65108;
+}
+@media screen and (max-width: 1028px) {
+  .searchInput {
+    margin-top: 3%;
+    width: 70%;
+    padding: 1%;
+  }
+}
+
+.resultAmount {
+  margin-top: 1%;
+}
+@media screen and (max-width: 1024px) {
+  .resultAmount {
+    margin-top: 3%;
+  }
+}
+
+.cardsContainer {
+  width: 70vw;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 500px) {
+  .cardsContainer {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 1028px) {
+  .cardsContainer {
+    width: 95vw;
+  }
+}
+.cardsContainer .notFound {
+  font-size: 20px;
+  color: #d65108;
+  margin: auto;
+}
+@media screen and (max-width: 1028px) {
+  .cardsContainer .notFound {
+    margin-top: 3%;
+  }
+}
+.cardsContainer .card {
+  width: 19vw;
+  height: 55vh;
+  margin-top: 2.5%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 4%;
+  box-shadow: 0px 5px 5px #aaaaaa;
+  transition: all 0.5s ease;
+}
+.cardsContainer .card:hover {
+  transform: scale(1.03);
+}
+@media screen and (max-width: 500px) {
+  .cardsContainer .card {
+    margin-top: 10%;
+    width: 55vw;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 768px) {
+  .cardsContainer .card {
+    width: 40vw;
+    height: 50vh;
+    margin-top: 6%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+  .cardsContainer .card {
+    width: 30vw;
+  }
+}
+.cardsContainer .card img {
+  width: 100%;
+  height: 70%;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+@media screen and (min-width: 500px) and (max-width: 768px) {
+  .cardsContainer .card img {
+    height: 65%;
+  }
+}
+.cardsContainer .card p:nth-child(2) {
+  font-weight: 600;
+  font-size: 15px;
+  padding: 0 2%;
+}
+.cardsContainer .card p:nth-child(3) {
+  color: white;
+  background-color: #d65108;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.2s all linear;
+}
+
+#popUp {
+  width: 50%;
+  height: 60%;
+  align-self: center;
+  position: fixed;
+  top: 20%;
+  display: none;
+  z-index: 2;
+  background-color: #d65108;
+  border-radius: 5px;
+  overflow-y: auto;
+  padding: 1%;
+}
+@media screen and (max-width: 1028px) {
+  #popUp {
+    width: 90%;
+    padding: 3%;
+  }
+}
+#popUp .recipeContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+@media screen and (max-width: 1028px) {
+  #popUp .recipeContainer {
+    height: auto;
+  }
+}
+#popUp .recipeContainer .title {
+  color: whitesmoke;
+  font-weight: 900;
+  font-size: 25px;
+}
+@media screen and (max-width: 500px) {
+  #popUp .recipeContainer .title {
+    font-size: 22px;
+  }
+}
+#popUp .recipeContainer .instructions {
+  font-size: 15px;
+  color: whitesmoke;
+}
+#popUp .recipeContainer .close {
+  position: absolute;
+  top: 0;
+  right: 2%;
+  color: white;
+  font-weight: 900;
+  font-size: 25px;
+  cursor: pointer;
+}
+#popUp .recipeContainer a {
+  color: whitesmoke;
+  transition: 0.2s all linear;
+  font-weight: 700;
+}
+#popUp .recipeContainer a:hover {
+  padding-left: 15px;
+}

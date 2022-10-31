@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+$main-Color: #d65108;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  flex-direction: column;
+  overflow: hidden scroll;
+  padding: 2% 0;
+  row-gap: 3%;
+}
+
+.slogan {
+  color: $main-Color;
+}
+
+.searchInput {
+  margin-top: 1%;
+  width: 40%;
+  border-radius: 25px;
+  padding: 0.5%;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  color: $main-Color;
+  @media screen and (max-width: 1028px) {
+    margin-top: 3%;
+    width: 70%;
+    padding: 1%;
+  }
+}
+
+.resultAmount {
+  margin-top: 1%;
+  @media screen and (max-width: 1024px) {
+    margin-top: 3%;
+  }
+}
+
+.cardsContainer {
+  width: 70vw;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  @media screen and (max-width: 500px) {
+    justify-content: center;
+  }
+  @media screen and (min-width: 500px) and (max-width: 1028px) {
+    width: 95vw;
+  }
+
+  .notFound {
+    font-size: 20px;
+    color: $main-Color;
+    margin: auto;
+
+    @media screen and (max-width: 1028px) {
+      margin-top: 3%;
+    }
+  }
+
+  .card {
+    width: 19vw;
+    height: 55vh;
+    margin-top: 2.5%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 4%;
+    box-shadow: 0px 5px 5px #aaaaaa;
+    transition: all 0.5s ease;
+    &:hover {
+      transform: scale(1.03);
+    }
+    @media screen and (max-width: 500px) {
+      margin-top: 10%;
+      width: 55vw;
+    }
+
+    @media screen and (min-width: 500px) and (max-width: 768px) {
+      width: 40vw;
+      height: 50vh;
+      margin-top: 6%;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1000px) {
+      width: 30vw;
+    }
+
+    img {
+      width: 100%;
+      height: 70%;
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+      @media screen and (min-width: 500px) and (max-width: 768px) {
+        height: 65%;
+      }
+    }
+
+    p:nth-child(2) {
+      font-weight: 600;
+      font-size: 15px;
+      padding: 0 2%;
+    }
+
+    p:nth-child(3) {
+      color: white;
+      background-color: $main-Color;
+      padding: 8px 15px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: 0.2s all linear;
+    }
+  }
+}
+
+#popUp {
+  width: 50%;
+  height: 60%;
+  align-self: center;
+  position: fixed;
+  top: 20%;
+  display: none;
+  z-index: 2;
+  background-color: $main-Color;
+  border-radius: 5px;
+  overflow-y: auto;
+  padding: 1%;
+  @media screen and (max-width: 1028px) {
+    width: 90%;
+    padding: 3%;
+  }
+
+  .recipeContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    @media screen and (max-width: 1028px) {
+      height: auto;
+    }
+
+    .title {
+      color: whitesmoke;
+      font-weight: 900;
+      font-size: 25px;
+      @media screen and (max-width: 500px) {
+        font-size: 22px;
+      }
+    }
+
+    .instructions {
+      font-size: 15px;
+      color: whitesmoke;
+    }
+
+    .close {
+      position: absolute;
+      top: 0;
+      right: 2%;
+      color: white;
+      font-weight: 900;
+      font-size: 25px;
+      cursor: pointer;
+    }
+
+    a {
+      color: whitesmoke;
+      transition: 0.2s all linear;
+      font-weight: 700;
+      &:hover {
+        padding-left: 15px;
+      }
+    }
+  }
+}
