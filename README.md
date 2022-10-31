@@ -1,6 +1,6 @@
 # 🍴 Secret Ingredient 🍴 #
 
-**A project thats allows you to enter a specific ingredient and receive recipes based on it, as well as watch how it is prepared.**
+**A project that's allows you to enter a specific ingredient and receive recipes based on it, as well as watch how they are prepared.**
 
 
 
